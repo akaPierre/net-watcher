@@ -1,0 +1,272 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=System.Runtime">
+    <!-- All visible text. To add Portuguese: copy this file to Strings.pt-BR.xaml and translate the values. -->
+
+    <sys:String x:Key="App.Title">Net Watcher</sys:String>
+    <sys:String x:Key="Header.Network">{0} · This PC {1}/{2} · Gateway {3} · Scanning {4}</sys:String>
+
+    <!-- Toolbar -->
+    <sys:String x:Key="Btn.ScanNow">Scan now</sys:String>
+    <sys:String x:Key="Btn.Export">Export CSV</sys:String>
+    <sys:String x:Key="Btn.UpdateVendors">Update vendor list</sys:String>
+    <sys:String x:Key="Lbl.AutoScan">Auto-scan every</sys:String>
+    <sys:String x:Key="Lbl.Minutes">min (0 = off)</sys:String>
+
+    <!-- Summary -->
+    <sys:String x:Key="Sum.Online">Online</sys:String>
+    <sys:String x:Key="Sum.Unknown">Unknown online</sys:String>
+    <sys:String x:Key="Sum.Known">Approved</sys:String>
+    <sys:String x:Key="Sum.Conflicts">Conflicts</sys:String>
+    <sys:String x:Key="Sum.Total">Registered</sys:String>
+
+    <!-- Tabs -->
+    <sys:String x:Key="Tab.Devices">Devices</sys:String>
+    <sys:String x:Key="Tab.IpMap">IP map</sys:String>
+    <sys:String x:Key="Tab.Events">Events</sys:String>
+
+    <!-- Filters -->
+    <sys:String x:Key="Lbl.Search">Search:</sys:String>
+    <sys:String x:Key="Lbl.Show">Show:</sys:String>
+    <sys:String x:Key="Filter.All">All devices</sys:String>
+    <sys:String x:Key="Filter.Online">Online</sys:String>
+    <sys:String x:Key="Filter.Unknown">Not approved</sys:String>
+    <sys:String x:Key="Filter.Offline">Offline</sys:String>
+    <sys:String x:Key="Filter.Conflicts">Conflicts</sys:String>
+    <sys:String x:Key="Hint.DoubleClick">Double-click a device to register it (name, owner, location, reserved IP).</sys:String>
+
+    <!-- Columns -->
+    <sys:String x:Key="Col.Status">Status</sys:String>
+    <sys:String x:Key="Col.Ip">IP</sys:String>
+    <sys:String x:Key="Col.Name">Name</sys:String>
+    <sys:String x:Key="Col.Type">Type</sys:String>
+    <sys:String x:Key="Col.Vendor">Manufacturer</sys:String>
+    <sys:String x:Key="Col.Hostname">Hostname</sys:String>
+    <sys:String x:Key="Col.Mac">MAC</sys:String>
+    <sys:String x:Key="Col.Owner">Owner</sys:String>
+    <sys:String x:Key="Col.Location">Location</sys:String>
+    <sys:String x:Key="Col.Known">Approved</sys:String>
+    <sys:String x:Key="Col.ReservedIp">Reserved IP</sys:String>
+    <sys:String x:Key="Col.Ports">Services</sys:String>
+    <sys:String x:Key="Col.FirstSeen">First seen</sys:String>
+    <sys:String x:Key="Col.LastSeen">Last seen</sys:String>
+    <sys:String x:Key="Col.Notes">Notes</sys:String>
+    <sys:String x:Key="Col.Ping">Ping</sys:String>
+    <sys:String x:Key="Col.Time">Time</sys:String>
+    <sys:String x:Key="Col.Event">Event</sys:String>
+    <sys:String x:Key="Col.Details">Details</sys:String>
+
+    <!-- Context menu -->
+    <sys:String x:Key="Menu.Edit">Edit / register…</sys:String>
+    <sys:String x:Key="Menu.MarkKnown">Mark as approved</sys:String>
+    <sys:String x:Key="Menu.MarkUnknown">Mark as not approved</sys:String>
+    <sys:String x:Key="Menu.CopyIp">Copy IP</sys:String>
+    <sys:String x:Key="Menu.CopyMac">Copy MAC</sys:String>
+    <sys:String x:Key="Menu.Forget">Forget device…</sys:String>
+    <sys:String x:Key="Btn.ClearEvents">Clear event log</sys:String>
+
+    <!-- IP map legend -->
+    <sys:String x:Key="Map.Legend.Free">Free</sys:String>
+    <sys:String x:Key="Map.Legend.Reserved">Reserved (offline)</sys:String>
+    <sys:String x:Key="Map.Legend.Known">Approved device</sys:String>
+    <sys:String x:Key="Map.Legend.Unknown">Unknown device</sys:String>
+    <sys:String x:Key="Map.Legend.Conflict">Conflict</sys:String>
+    <sys:String x:Key="Map.Legend.Infra">Router / this PC</sys:String>
+    <sys:String x:Key="Map.Free">Free</sys:String>
+    <sys:String x:Key="Map.ReservedFor">Reserved for: {0}</sys:String>
+
+    <!-- Edit dialog -->
+    <sys:String x:Key="Edit.Title">Device details</sys:String>
+    <sys:String x:Key="Edit.Identity">Detected</sys:String>
+    <sys:String x:Key="Edit.Registration">Registration</sys:String>
+    <sys:String x:Key="Edit.Approved">Approved device (belongs to the office)</sys:String>
+    <sys:String x:Key="Edit.TypeHint">Leave empty to use the detected type</sys:String>
+    <sys:String x:Key="Edit.ReservedHint">IP this device should always have (leave empty if it uses DHCP)</sys:String>
+    <sys:String x:Key="Edit.IpHistory">IP history</sys:String>
+    <sys:String x:Key="Edit.PrivateMacNote">This device uses a private (randomized) MAC address. Phones do this by default; the MAC may change. Turn off "Private Wi-Fi address" for the office network on the device to keep it recognized.</sys:String>
+    <sys:String x:Key="Edit.InvalidIp">"{0}" is not a valid IP address.</sys:String>
+    <sys:String x:Key="Edit.ReservedTaken">{0} is already reserved for "{1}". Save anyway?</sys:String>
+    <sys:String x:Key="Btn.Save">Save</sys:String>
+    <sys:String x:Key="Btn.Cancel">Cancel</sys:String>
+
+    <!-- Status -->
+    <sys:String x:Key="Status.Online">Online</sys:String>
+    <sys:String x:Key="Status.Offline">Offline</sys:String>
+    <sys:String x:Key="Status.Scanning">Scanning {0}…</sys:String>
+    <sys:String x:Key="Status.LastScan">Last scan {0} · {1} online · {2} not approved</sys:String>
+    <sys:String x:Key="Status.ScanFailed">Scan failed: {0}</sys:String>
+    <sys:String x:Key="Status.NoNetwork">No active network connection found.</sys:String>
+    <sys:String x:Key="Status.LoadingVendors">Loading manufacturer list…</sys:String>
+    <sys:String x:Key="Status.VendorsUpdated">Manufacturer list updated ({0} entries).</sys:String>
+    <sys:String x:Key="Status.Exported">Exported to {0}</sys:String>
+
+    <!-- Common -->
+    <sys:String x:Key="Common.Yes">Yes</sys:String>
+    <sys:String x:Key="Common.No">No</sys:String>
+    <sys:String x:Key="Confirm.Forget">Forget {0} device(s)? Their registration and history will be deleted. If they are still connected they will reappear as new devices.</sys:String>
+
+    <!-- Vendors / types -->
+    <sys:String x:Key="Vendor.Unknown">Unknown manufacturer</sys:String>
+    <sys:String x:Key="Vendor.Private">Private MAC (phone/laptop)</sys:String>
+    <sys:String x:Key="Type.Unknown">Unknown</sys:String>
+    <sys:String x:Key="Type.ThisComputer">This computer</sys:String>
+    <sys:String x:Key="Type.Router">Router / gateway</sys:String>
+    <sys:String x:Key="Type.Printer">Printer</sys:String>
+    <sys:String x:Key="Type.Camera">Camera / DVR</sys:String>
+    <sys:String x:Key="Type.AppleMobile">iPhone / iPad</sys:String>
+    <sys:String x:Key="Type.Apple">Apple device</sys:String>
+    <sys:String x:Key="Type.TvMedia">TV / media</sys:String>
+    <sys:String x:Key="Type.WindowsPc">Windows PC</sys:String>
+    <sys:String x:Key="Type.Computer">Computer</sys:String>
+    <sys:String x:Key="Type.PhoneTablet">Phone / tablet</sys:String>
+    <sys:String x:Key="Type.NetworkGear">Network equipment</sys:String>
+    <sys:String x:Key="Type.Iot">Smart / IoT device</sys:String>
+    <sys:String x:Key="Type.PrivateMac">Phone or laptop (private MAC)</sys:String>
+
+    <!-- Events -->
+    <sys:String x:Key="Event.Info">Info</sys:String>
+    <sys:String x:Key="Event.NewDevice">New device</sys:String>
+    <sys:String x:Key="Event.UnknownOnline">Unknown online</sys:String>
+    <sys:String x:Key="Event.Online">Online</sys:String>
+    <sys:String x:Key="Event.Offline">Offline</sys:String>
+    <sys:String x:Key="Event.IpChanged">IP changed</sys:String>
+    <sys:String x:Key="Event.Conflict">IP conflict</sys:String>
+
+    <sys:String x:Key="Msg.NewDevice">New device on the network: {0} at {1} ({2})</sys:String>
+    <sys:String x:Key="Msg.UnknownOnline">Unapproved device came online: {0} at {1} ({2})</sys:String>
+    <sys:String x:Key="Msg.Online">{0} came online at {1}</sys:String>
+    <sys:String x:Key="Msg.Offline">{0} went offline (last IP {1})</sys:String>
+    <sys:String x:Key="Msg.IpChanged">{0} changed IP: {1} → {2}</sys:String>
+    <sys:String x:Key="Msg.ReservedTaken">{0} is reserved for "{1}" but is being used by {2} ({3})</sys:String>
+    <sys:String x:Key="Msg.IpFlapping">Possible IP conflict on {0}: it keeps switching between "{1}" and "{2}"</sys:String>
+    <sys:String x:Key="Msg.MultipleIps">{0} answers on several IPs: {1}</sys:String>
+    <sys:String x:Key="Msg.InitialInventory">First inventory: {0} devices found. Register the office devices to approve them.</sys:String>
+    <sys:String x:Key="Msg.NewSinceLastRun">{0} new device(s) found since the app last ran.</sys:String>
+
+    <!-- Alerts (tray notifications) -->
+    <sys:String x:Key="Alert.NewDevice">New device on the network</sys:String>
+    <sys:String x:Key="Alert.UnknownOnline">Unapproved device online</sys:String>
+    <sys:String x:Key="Alert.Conflict">Possible IP conflict</sys:String>
+    <sys:String x:Key="Alert.DeviceLine">{0} — {1} ({2})</sys:String>
+    <sys:String x:Key="Alert.ManyTitle">Net Watcher: {0} alerts</sys:String>
+    <sys:String x:Key="Alert.UnknownSummaryTitle">Unapproved devices online</sys:String>
+    <sys:String x:Key="Alert.UnknownSummary">{0} device(s) on the network are not approved.</sys:String>
+
+    <!-- Tray -->
+    <sys:String x:Key="Tray.Open">Open Net Watcher</sys:String>
+    <sys:String x:Key="Tray.Scan">Scan now</sys:String>
+    <sys:String x:Key="Tray.DataFolder">Open data folder</sys:String>
+    <sys:String x:Key="Tray.Exit">Exit</sys:String>
+    <sys:String x:Key="Tray.StillRunning">Net Watcher keeps monitoring in the background. Use the tray icon to open or exit.</sys:String>
+
+    <!-- Extra columns / filters / buttons -->
+    <sys:String x:Key="Btn.Settings">Settings</sys:String>
+    <sys:String x:Key="Btn.ExportOutages">Export</sys:String>
+    <sys:String x:Key="Filter.Critical">Critical</sys:String>
+    <sys:String x:Key="Col.Critical">Critical device (checked every minute)</sys:String>
+    <sys:String x:Key="Col.Since">For</sys:String>
+    <sys:String x:Key="Col.What">What</sys:String>
+    <sys:String x:Key="Col.Start">Started</sys:String>
+    <sys:String x:Key="Col.End">Ended</sys:String>
+    <sys:String x:Key="Col.Duration">Duration</sys:String>
+    <sys:String x:Key="Edit.Critical">Critical device: alert me if it goes offline</sys:String>
+    <sys:String x:Key="Edit.CriticalHint">Checked every minute. Give it a reserved IP on the router so it doesn't move around.</sys:String>
+    <sys:String x:Key="Edit.Muted">Mute notifications for this device (still logged in Events)</sys:String>
+
+    <!-- Health tab -->
+    <sys:String x:Key="Tab.Health">Internet &amp; critical</sys:String>
+    <sys:String x:Key="Health.Internet">Internet</sys:String>
+    <sys:String x:Key="Health.Router">Router</sys:String>
+    <sys:String x:Key="Health.RouterLabel">Router (office network)</sys:String>
+    <sys:String x:Key="Health.Uptime24">Internet uptime, last 24 h</sys:String>
+    <sys:String x:Key="Health.Outages7d">Outages, last 7 days</sys:String>
+    <sys:String x:Key="Health.CriticalLabel">Critical devices up</sys:String>
+    <sys:String x:Key="Health.CriticalSummary">{0} of {1}</sys:String>
+    <sys:String x:Key="Health.NoCritical">None set</sys:String>
+    <sys:String x:Key="Health.UpMs">Up · {0} ms</sys:String>
+    <sys:String x:Key="Health.DownSince">Down since {0}</sys:String>
+    <sys:String x:Key="Health.Checking">Checking…</sys:String>
+    <sys:String x:Key="Health.ChartTitle">Response time</sys:String>
+    <sys:String x:Key="Health.OutageLegend">No internet reply</sys:String>
+    <sys:String x:Key="Health.OutageTip">No internet reply</sys:String>
+    <sys:String x:Key="Health.NoReply">no reply</sys:String>
+    <sys:String x:Key="Health.Collecting">Collecting data… the first points appear within a minute.</sys:String>
+    <sys:String x:Key="Health.Range">Show:</sys:String>
+    <sys:String x:Key="Health.Range1h">Last hour</sys:String>
+    <sys:String x:Key="Health.Range6h">Last 6 hours</sys:String>
+    <sys:String x:Key="Health.Range24h">Last 24 hours</sys:String>
+    <sys:String x:Key="Health.Range7d">Last 7 days</sys:String>
+    <sys:String x:Key="Health.CriticalTitle">Critical devices</sys:String>
+    <sys:String x:Key="Health.CriticalHint">To watch a device, double-click it in Devices and tick "Critical device".</sys:String>
+    <sys:String x:Key="Health.OutagesTitle">Outage history</sys:String>
+    <sys:String x:Key="Health.StatusUp">✔ Up</sys:String>
+    <sys:String x:Key="Health.StatusDown">✖ Down</sys:String>
+    <sys:String x:Key="Health.UpFor">up {0}</sys:String>
+    <sys:String x:Key="Health.DownFor">down {0}</sys:String>
+    <sys:String x:Key="Outage.Internet">Internet down (router OK)</sys:String>
+    <sys:String x:Key="Outage.Router">Router / office network down</sys:String>
+    <sys:String x:Key="Status.HealthFailed">Health check failed: {0}</sys:String>
+
+    <!-- Health events / alerts -->
+    <sys:String x:Key="Event.CriticalDown">Critical down</sys:String>
+    <sys:String x:Key="Event.CriticalUp">Critical back</sys:String>
+    <sys:String x:Key="Event.InternetDown">Internet down</sys:String>
+    <sys:String x:Key="Event.InternetUp">Internet back</sys:String>
+    <sys:String x:Key="Event.RouterDown">Router down</sys:String>
+    <sys:String x:Key="Event.RouterUp">Router back</sys:String>
+    <sys:String x:Key="Event.Maintenance">Maintenance</sys:String>
+    <sys:String x:Key="Msg.CriticalDown">Critical device "{0}" ({1}) is not responding.</sys:String>
+    <sys:String x:Key="Msg.CriticalUp">Critical device "{0}" ({1}) is back after {2}.</sys:String>
+    <sys:String x:Key="Msg.InternetDown">The internet is down, but the router still answers: the problem is likely on the operator's side.</sys:String>
+    <sys:String x:Key="Msg.InternetUp">Internet is back after {0}.</sys:String>
+    <sys:String x:Key="Msg.RouterDown">The router ({0}) is not answering: the office network or the router itself is down.</sys:String>
+    <sys:String x:Key="Msg.RouterUp">The router is answering again after {0}.</sys:String>
+    <sys:String x:Key="Msg.BackupSaved">Database backup saved: {0}</sys:String>
+    <sys:String x:Key="Msg.Pruned">Removed {0} old history records.</sys:String>
+    <sys:String x:Key="Msg.MaintenanceFailed">Maintenance failed: {0}</sys:String>
+    <sys:String x:Key="Alert.CriticalDown">Critical device offline</sys:String>
+    <sys:String x:Key="Alert.CriticalUp">Critical device back online</sys:String>
+    <sys:String x:Key="Alert.InternetDown">Internet is down</sys:String>
+    <sys:String x:Key="Alert.InternetUp">Internet is back</sys:String>
+    <sys:String x:Key="Alert.RouterDown">Router not responding</sys:String>
+    <sys:String x:Key="Alert.RouterUp">Router is back</sys:String>
+
+    <!-- Settings window -->
+    <sys:String x:Key="Settings.Title">Settings</sys:String>
+    <sys:String x:Key="Settings.General">General</sys:String>
+    <sys:String x:Key="Settings.StartWithWindows">Start Net Watcher when I sign in to Windows</sys:String>
+    <sys:String x:Key="Settings.StartWithWindowsHint">It starts minimized in the tray. Only affects your Windows user.</sys:String>
+    <sys:String x:Key="Settings.CloseToTray">Closing the window keeps it running in the tray</sys:String>
+    <sys:String x:Key="Settings.Network">Network</sys:String>
+    <sys:String x:Key="Settings.Interface">Network adapter</sys:String>
+    <sys:String x:Key="Settings.InterfaceAuto">Automatic (the one with internet)</sys:String>
+    <sys:String x:Key="Settings.InterfaceMissing">(not connected)</sys:String>
+    <sys:String x:Key="Settings.ScanRange">Scan range</sys:String>
+    <sys:String x:Key="Settings.ScanRangeHint">Leave empty to scan the whole subnet. Example: 192.168.1.0/25 scans .1 to .126.</sys:String>
+    <sys:String x:Key="Settings.RangeInvalid">Write the range as address/prefix, for example 192.168.1.0/24.</sys:String>
+    <sys:String x:Key="Settings.RangeTooBig">The range is too large. Use a prefix of /{0} or smaller (at most about 4,000 addresses).</sys:String>
+    <sys:String x:Key="Settings.RangeOutside">The range must be inside this PC's network ({0}). Devices behind another router can't be seen.</sys:String>
+    <sys:String x:Key="Settings.Notifications">Notifications</sys:String>
+    <sys:String x:Key="Settings.AlertNew">New device joins the network</sys:String>
+    <sys:String x:Key="Settings.AlertUnknown">Unapproved device comes online</sys:String>
+    <sys:String x:Key="Settings.AlertConflict">Possible IP conflict</sys:String>
+    <sys:String x:Key="Settings.AlertCritical">Critical device goes offline or comes back</sys:String>
+    <sys:String x:Key="Settings.AlertInternet">Internet or router goes down or comes back</sys:String>
+    <sys:String x:Key="Settings.MuteHint">To silence one noisy device, open it in Devices and tick "Mute notifications". Everything is still logged in Events.</sys:String>
+    <sys:String x:Key="Settings.Health">Internet &amp; critical device checks</sys:String>
+    <sys:String x:Key="Settings.CheckEvery">Check every</sys:String>
+    <sys:String x:Key="Settings.Seconds">seconds</sys:String>
+    <sys:String x:Key="Settings.Targets">Internet test addresses</sys:String>
+    <sys:String x:Key="Settings.TargetsHint">Pinged to test the internet; it counts as up if any one answers. Defaults: 1.1.1.1, 8.8.8.8</sys:String>
+    <sys:String x:Key="Settings.Data">Data &amp; backups</sys:String>
+    <sys:String x:Key="Settings.KeepEvents">Keep event log for</sys:String>
+    <sys:String x:Key="Settings.KeepHealth">Keep internet history for</sys:String>
+    <sys:String x:Key="Settings.KeepBackups">Keep the last</sys:String>
+    <sys:String x:Key="Settings.Days">days</sys:String>
+    <sys:String x:Key="Settings.Weekly">weekly backups</sys:String>
+    <sys:String x:Key="Settings.BackupNow">Back up now</sys:String>
+    <sys:String x:Key="Settings.OpenBackups">Open backups folder</sys:String>
+    <sys:String x:Key="Settings.LastBackup">Last backup: {0}. A new one is made automatically every 7 days.</sys:String>
+    <sys:String x:Key="Settings.NoBackupYet">No backup yet. The first one is made a minute after the app starts.</sys:String>
+    <sys:String x:Key="Settings.NumberRange">Enter a number between {0} and {1}.</sys:String>
+</ResourceDictionary>

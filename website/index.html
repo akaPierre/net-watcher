@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Net Watcher — know every device on your office network</title>
+  <meta name="description" content="Free Windows app that inventories every device on your office network, alerts on unknown devices and IP conflicts, and tracks your internet connection.">
+  <!-- GitHub repository whose latest Release provides the download files. -->
+  <meta name="nw-repo" content="akaPierre/net-watcher">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top"><img src="assets/logo.png" alt="" width="28" height="28"> Net Watcher</a>
+    <nav aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#tour">Tour</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#download" class="btn btn-small">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ================= Hero ================= -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">For office IT · Windows 10 &amp; 11</p>
+        <h1>Know every device on your office network.</h1>
+        <p class="lead">Net Watcher lists everything connected to your network with its IP, MAC address and manufacturer,
+          flags devices nobody approved, warns about IP conflicts and keeps a record of every internet outage.</p>
+        <div class="cta">
+          <a class="btn btn-primary btn-large" data-download="installer" href="#download">
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
+            Download for Windows
+          </a>
+          <a class="btn btn-ghost btn-large" href="#tour">Take the tour</a>
+        </div>
+        <p class="meta" data-release-meta>Free · No admin rights needed · Data stays on your PC</p>
+      </div>
+      <div class="hero-shot" aria-hidden="true">
+        <div class="mini-window">
+          <div class="mini-bar"><span></span><span></span><span></span></div>
+          <div class="mini-stats">
+            <div><b class="ok">10</b><small>Online</small></div>
+            <div><b class="bad">2</b><small>Unknown</small></div>
+            <div><b>0</b><small>Conflicts</small></div>
+          </div>
+          <div class="mini-rows">
+            <div class="mini-row"><i class="dot on"></i>192.168.0.1<em>Office router</em><span class="tick">✔</span></div>
+            <div class="mini-row"><i class="dot on"></i>192.168.0.20<em>HP LaserJet ★</em><span class="tick">✔</span></div>
+            <div class="mini-row bad-row"><i class="dot on"></i>192.168.0.57<em>Unknown device</em><span class="cross">✖</span></div>
+            <div class="mini-row"><i class="dot on"></i>192.168.0.42<em>Ana's iPhone</em><span class="tick">✔</span></div>
+            <div class="mini-row bad-row"><i class="dot on"></i>192.168.0.63<em>Galaxy-A54</em><span class="cross">✖</span></div>
+          </div>
+          <div class="mini-toast">
+            <img src="assets/logo.png" alt="" width="18" height="18">
+            <div><b>New device on the network</b><span>Galaxy-A54 — 192.168.0.63</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Features ================= -->
+  <section id="features" class="section">
+    <div class="wrap">
+      <h2>Everything an office IT person needs to see</h2>
+      <p class="section-lead">One window that answers "what is on my network right now, and is it supposed to be there?"</p>
+      <div class="features">
+        <article class="feature">
+          <div class="ficon">🖧</div>
+          <h3>Full device inventory</h3>
+          <p>IP, MAC, manufacturer, hostname and device type for every device, whether it is a PC, phone, printer, camera or smart TV.</p>
+        </article>
+        <article class="feature">
+          <div class="ficon">🛡</div>
+          <h3>Spot outsiders instantly</h3>
+          <p>Register the office's own devices once. Anything new or unapproved is highlighted in red and pops a Windows notification.</p>
+        </article>
+        <article class="feature">
+          <div class="ficon">⚠</div>
+          <h3>IP conflict warnings</h3>
+          <p>Reserve IPs for printers and servers. Net Watcher warns when another device takes one, or when two devices keep fighting over an address.</p>
+        </article>
+        <article class="feature">
+          <div class="ficon">▦</div>
+          <h3>Visual IP map</h3>
+          <p>All 254 addresses at a glance: free, in use, reserved or in conflict. Pick a free IP for a new device in seconds.</p>
+        </article>
+        <article class="feature">
+          <div class="ficon">★</div>
+          <h3>Critical device alerts</h3>
+          <p>Mark the printer, the camera recorder or the server as critical. They are checked every minute and you are told the moment one stops answering.</p>
+        </article>
+        <article class="feature">
+          <div class="ficon">📈</div>
+          <h3>Internet outage log</h3>
+          <p>Response time charts and an outage history that tells "the operator's internet is down" apart from "our router is down". Export it as evidence.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Interactive tour ================= -->
+  <section id="tour" class="section section-alt">
+    <div class="wrap">
+      <h2>Take a look inside</h2>
+      <p class="section-lead">An interactive preview with sample data. Click the tabs, hover the map and the chart.</p>
+
+      <div class="app" role="region" aria-label="Net Watcher preview">
+        <div class="app-titlebar"><img src="assets/logo.png" alt="" width="16" height="16"> Net Watcher</div>
+        <div class="app-body">
+          <div class="app-header">
+            <div>
+              <div class="app-title">Net Watcher</div>
+              <div class="app-sub">Ethernet · This PC 192.168.0.14/24 · Gateway 192.168.0.1 · Scanning 192.168.0.0/24</div>
+            </div>
+            <div class="app-actions"><span class="fake-btn primary">Scan now</span><span class="fake-btn">Export CSV</span><span class="fake-btn">Settings</span></div>
+          </div>
+          <div class="app-stats">
+            <div class="stat"><b class="ok" id="st-online">0</b><small>Online</small></div>
+            <div class="stat"><b class="bad" id="st-unknown">0</b><small>Unknown online</small></div>
+            <div class="stat"><b class="warn">0</b><small>Conflicts</small></div>
+            <div class="stat"><b class="ok" id="st-known">0</b><small>Approved</small></div>
+            <div class="stat"><b id="st-total">0</b><small>Registered</small></div>
+          </div>
+
+          <div class="tabs" role="tablist">
+            <button role="tab" aria-selected="true" aria-controls="tab-devices" id="t-devices">Devices</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-map" id="t-map">IP map</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-health" id="t-health">Internet &amp; critical</button>
+          </div>
+
+          <div class="tabpanel" role="tabpanel" id="tab-devices" aria-labelledby="t-devices">
+            <div class="table-scroll">
+              <table class="grid">
+                <thead><tr><th></th><th></th><th>IP</th><th>Name</th><th>Type</th><th>Manufacturer</th><th>MAC</th><th>Owner</th><th>Approved</th></tr></thead>
+                <tbody id="device-rows"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="tabpanel" role="tabpanel" id="tab-map" aria-labelledby="t-map" hidden>
+            <div class="legend">
+              <span><i class="sw free"></i>Free</span><span><i class="sw known"></i>Approved device</span>
+              <span><i class="sw unknown"></i>Unknown device</span><span><i class="sw reserved"></i>Reserved (offline)</span>
+              <span><i class="sw infra"></i>Router / this PC</span>
+            </div>
+            <div class="ipmap" id="ipmap"></div>
+            <div class="ip-tip" id="ip-tip" aria-live="polite">Hover an address to see who uses it.</div>
+          </div>
+
+          <div class="tabpanel" role="tabpanel" id="tab-health" aria-labelledby="t-health" hidden>
+            <div class="health-tiles">
+              <div class="stat"><b><span class="ok">✔</span> Up · 9 ms</b><small>Internet</small></div>
+              <div class="stat"><b><span class="ok">✔</span> Up · 1 ms</b><small>Router (office network)</small></div>
+              <div class="stat"><b>99.3%</b><small>Internet uptime, last 24 h</small></div>
+              <div class="stat"><b id="outage-tile">1</b><small>Outages, last 7 days</small></div>
+            </div>
+            <div class="chart-head">
+              <b>Response time, last 24 hours</b>
+              <span class="key"><i style="background:#2a78d6"></i>Internet</span>
+              <span class="key"><i style="background:#eb6834"></i>Router</span>
+              <span class="key"><i class="outage-key"></i>No internet reply</span>
+            </div>
+            <div class="chart" id="chart"></div>
+            <table class="grid small">
+              <thead><tr><th>Outage</th><th>Started</th><th>Duration</th></tr></thead>
+              <tbody><tr><td><b>Internet down (router OK)</b></td><td id="outage-start">—</td><td id="outage-duration">—</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= How it works ================= -->
+  <section id="how" class="section">
+    <div class="wrap">
+      <h2>Non-invasive by design</h2>
+      <p class="section-lead">Net Watcher only uses the questions every device on a network already answers. Nothing is installed on the devices, and no traffic is read.</p>
+      <ol class="steps">
+        <li><b>Discover.</b> A fresh ARP request and a ping to every address in the subnet. Phones that ignore ping still have to answer ARP.</li>
+        <li><b>Identify.</b> The manufacturer comes from the public IEEE registry; names from NetBIOS, mDNS/Bonjour and the router's DNS; the device type from a few well-known service ports.</li>
+        <li><b>Compare.</b> Each device is matched against your registry of approved devices and reserved IPs.</li>
+        <li><b>Alert.</b> Unknown devices, conflicts, critical devices going down and internet outages raise a Windows notification and are logged.</li>
+      </ol>
+      <div class="note">
+        <b>Use it responsibly.</b> Run Net Watcher only on networks you own or administer, and let the people using the network know devices are inventoried, as your company policy and privacy law (such as LGPD or GDPR) require.
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Download ================= -->
+  <section id="download" class="section section-alt">
+    <div class="wrap">
+      <h2>Download Net Watcher</h2>
+      <p class="section-lead" data-release-line>Free for Windows 10 and 11 (64-bit). Nothing else to install.</p>
+      <div class="downloads">
+        <article class="dl-card recommended">
+          <span class="badge">Recommended</span>
+          <h3>Installer</h3>
+          <p>Adds Start menu and desktop shortcuts and can be uninstalled from Settings → Apps. Installing a newer version upgrades in place and keeps your data.</p>
+          <a class="btn btn-primary" data-download="installer" href="#">Download .msi</a>
+          <dl class="dl-meta" data-file-meta="installer"></dl>
+        </article>
+        <article class="dl-card">
+          <h3>Portable</h3>
+          <p>A single file you can run from any folder or a USB stick. Nothing is installed. Both versions share the same data.</p>
+          <a class="btn btn-secondary" data-download="portable" href="#">Download .exe</a>
+          <dl class="dl-meta" data-file-meta="portable"></dl>
+        </article>
+      </div>
+      <p class="dl-missing" id="dl-missing" hidden>The download list could not be loaded right now. Please try again in a few minutes.</p>
+      <div class="smartscreen">
+        <b>Seeing "Windows protected your PC"?</b> The app is not code-signed yet, so Windows SmartScreen asks before running it the first time.
+        Click <b>More info</b> → <b>Run anyway</b>. You can check the file is genuine by comparing its SHA-256 checksum above.
+      </div>
+      <h3 class="req-title">Requirements</h3>
+      <ul class="reqs">
+        <li>Windows 10 or 11, 64-bit</li>
+        <li>A PC connected to the network you want to monitor (cable recommended)</li>
+        <li>No administrator rights and no extra drivers needed</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section id="faq" class="section">
+    <div class="wrap narrow">
+      <h2>Questions</h2>
+      <details>
+        <summary>Does it slow down the network?</summary>
+        <p>No. A full scan of a 254-address network takes about ten seconds and sends a few small packets per address. Health checks send a handful of pings per minute.</p>
+      </details>
+      <details>
+        <summary>Why do some phones show "Private MAC"?</summary>
+        <p>Modern iPhones and Android phones use a random MAC address per Wi-Fi network for privacy, so there is no manufacturer to look up and the address may change. For staff phones, turn off "Private Wi-Fi address" for the office network so they stay recognized.</p>
+      </details>
+      <details>
+        <summary>Can it block a device?</summary>
+        <p>No, on purpose. Blocking from a PC would mean interfering with network traffic. Use your router's MAC filter, or give visitors a separate guest Wi-Fi.</p>
+      </details>
+      <details>
+        <summary>Can it tell which switch port a device is plugged into?</summary>
+        <p>Not yet. That needs a managed switch with SNMP. It is on the roadmap.</p>
+      </details>
+      <details>
+        <summary>Where is my data stored?</summary>
+        <p>Only on your PC, in <code>%LOCALAPPDATA%\NetWatcher</code>, with an automatic weekly backup. Uninstalling keeps it; delete the folder to remove everything.</p>
+      </details>
+      <details>
+        <summary>Does it need to stay open?</summary>
+        <p>Closing the window keeps it running in the system tray, and it can start automatically when you sign in to Windows (Settings → Start with Windows).</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span><img src="assets/logo.png" alt="" width="18" height="18"> Net Watcher <span data-version></span></span>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
