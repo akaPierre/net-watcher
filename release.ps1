@@ -19,16 +19,23 @@ param([string]$Notes = "")
 $ErrorActionPreference = 'Stop'
 $root = $PSScriptRoot
 
-if (-not (Get-Command gh -ErrorAction SilentlyContinue)) { throw "GitHub CLI not found. Install it: winget install GitHub.cli" }
-gh auth status *> $null
-if ($LASTEXITCODE -ne 0) { throw "GitHub CLI is not signed in. Run: gh auth login" }
+# Runs a gh command only to test whether it succeeds. Windows PowerShell 5.1 turns a native
+# program's stderr into a terminating error under 'Stop', so relax that just for the probe.
+function Test-Gh([string[]]$GhArgs) {
+    $prev = $ErrorActionPreference
+    $ErrorActionPreference = 'Continue'
+    try { & gh @GhArgs 2>&1 | Out-Null; return $LASTEXITCODE -eq 0 }
+    finally { $ErrorActionPreference = $prev }
+}
+
+if (-not (Get-Command gh -ErrorAction SilentlyContinue)) { throw "GitHub CLI not found. Install it from https://cli.github.com" }
+if (-not (Test-Gh @('auth', 'status'))) { throw "GitHub CLI is not signed in. Run: gh auth login" }
 
 $csproj = Join-Path $root 'src\NetWatcher\NetWatcher.csproj'
 $version = ([xml](Get-Content $csproj -Raw)).Project.PropertyGroup.Version | Where-Object { $_ } | Select-Object -First 1
 $tag = "v$version"
 
-gh release view $tag *> $null
-if ($LASTEXITCODE -eq 0) { throw "Release $tag already exists. Raise <Version> in NetWatcher.csproj first." }
+if (Test-Gh @('release', 'view', $tag)) { throw "Release $tag already exists. Raise <Version> in NetWatcher.csproj first." }
 
 if (git -C $root status --porcelain) { throw "There are uncommitted changes. Commit them first so the release matches the code." }
 
@@ -44,6 +51,7 @@ Windows 10/11, 64-bit. The files are not code-signed: if SmartScreen warns, clic
 "@
 }
 
+$ErrorActionPreference = 'Continue'  # git/gh print progress on stderr
 git -C $root push origin HEAD
 gh release create $tag @files --title "Net Watcher $version" --notes $Notes --target (git -C $root rev-parse HEAD)
 if ($LASTEXITCODE -ne 0) { throw "gh release create failed." }
